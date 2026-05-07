@@ -1,0 +1,438 @@
+.hero {
+    position: relative;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+}
+
+.hero {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.hero img {
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 25px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        height: 250px;
+    }
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+
+.navbar {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: #a60000;
+    color: white !important;
+    border-radius: 5px;
+    padding: 6px 12px;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #7f0000;
+    color: white !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(210, 0, 0);
+}
+
+.dropdown-menu {
+    background-color: #a60000;
+    color: white;
+}
+
+.dropdown-item {
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown-item:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.input-group.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    background-color: lightgray;
+}
+
+.btn {
+    background-color: #a60000;
+    color: white;
+}
+
+.btn:hover {
+    background-color: red;
+    color: white;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+.footer-box {
+    background: #a60000;
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-box h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-box {
+        margin: 15px;
+        padding: 20px;
+    }
+    .footer-box h4 {
+        margin-top: 15px;
+    }
+}
+
+.product-card {
+    background: #2f5d3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.product-img {
+    background: #2f5d3a;
+    margin: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.card-body {
+    padding-top: 0;
+    background: #2f5d3a;
+    color: white;
+    font-weight: bold;
+}
+
+.btn {
+    font-weight: bold;
+    background-color: white;
+    color: #a60000;
+}
+
+.sticky-profile {
+    position: sticky;
+    top: 30px;
+}
+
+.sticky-profile .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-profile .mt-4 {
+    margin-top: auto;
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    /* kitölti az oszlopot */
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1 0 auto;
+    /* kitölti a rendelkezésre álló helyet */
+}
+
+footer {
+    flex-shrink: 0;
+    /* nem zsugorodik össze */
+}
+
+.termek-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 egyenlő oszlop */
+    gap: 20px;
+    /* távolság a kártyák között */
+}
+
+
+/* Szülő div-nek relative, hogy a lista pont az input alatt legyen */
+
+.input-group.align-items-center {
+    position: relative;
+}
+
+
+/* Autocomplete lista stílusa */
+
+#ajanlasok {
+    position: absolute;
+    /* az input alá kerül */
+    top: 100%;
+    /* közvetlenül alatta */
+    left: 0;
+    width: 100%;
+    /* input szélessége */
+    max-height: 250px;
+    /* ne legyen túl magas */
+    overflow-y: auto;
+    /* görgetés, ha sok találat van */
+    background-color: #2f5d3a;
+    /* megegyezik a product-card színével */
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    z-index: 1000;
+}
+
+
+/* Egyes találatok stílusa kártyaszerűen */
+
+#ajanlasok .ajanlat {
+    padding: 10px 15px;
+    margin: 5px 10px;
+    background: #3b733f;
+    /* árnyalat a product-card színéből */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+
+/* Hover effekt */
+
+#ajanlasok .ajanlat:hover {
+    background-color: #4ea14f;
+    color: white;
+}
+
+#termekLista {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+#kaja {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.ceruza-ikon {
+    width: 18px;
+    cursor: pointer;
+}
+
+
+/* ADMIN FUTÁR ELFOGADÁS MENÜ */
+
+#elfogad.btn:hover {
+    background-color: #4ea14f;
+}
+
+
+/*Nyomtatás*/
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #szamla,
+    #szamla * {
+        visibility: visible;
+    }
+    #szamla {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+    }
+    .no-print {
+        display: none;
+    }
+}
+
+input[type="radio"]:checked+label {
+    background-color: #dc3545 !important;
+    /* piros */
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+
+.card-header {
+    background: #2f5d3a;
+    border-bottom: none;
+}
+
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+
+/* Nyilak */
+
+.page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.page-btn:hover {
+    background: #333;
+}
+
+.page-btn.disabled {
+    background: #ccc;
+    pointer-events: none;
+}
+
+
+/* Oldalszámok */
+
+.page-numbers {
+    display: flex;
+    gap: 6px;
+}
+
+.page-number {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #f1f1f1;
+    color: #333;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.page-number:hover {
+    background: #ddd;
+}
+
+.page-number.active {
+    background: #111;
+    color: white;
+}
+
+
+/* Mobil optimalizálás */
+
+@media (max-width: 576px) {
+    .page-number {
+        min-width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+    .page-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
